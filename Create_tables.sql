@@ -45,11 +45,12 @@ abscissa       float(8,5)  NOT NULL,
 ordinate       float(8,5)  NOT NULL, 
 Location_tag   varchar(50),
 Status 		   ENUM('UNRESOLVED', 'RESOLVED', 'PROCESSING') DEFAULT 'UNRESOLVED',
-Report 		   varchar(50),
+Report 		   varchar(100),
 Photo_pointer1 longblob, #report photo
 Photo_pointer2 longblob, #Resolved photo
 Time_stamp1    date,
-Time_stamp2    date
+Time_stamp2    date,
+Rating 		  float(3,2) DEFAULT 0.00
 );
 
 CREATE TABLE Reports(
